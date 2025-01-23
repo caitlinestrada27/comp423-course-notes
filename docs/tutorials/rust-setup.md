@@ -65,7 +65,7 @@ Build your project using Cargo:
 ``` 
 cargo build
 ```
-!!! note "What does this command do?"
+!!! question "What does this command do?"
     It compiles your project's source code into an executable binary (if it's a binary project) or a library (if it's a library project).
 
 
