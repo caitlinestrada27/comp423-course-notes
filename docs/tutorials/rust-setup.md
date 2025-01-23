@@ -1,11 +1,11 @@
-# Setting up a dev container for Rust
+# Setting Up a Dev Container for Rust
 
 * Primary author: [Caitlin Estrada](https://github.com/caitlinestrada27)
 * Reviewer: [Sanjana Gopalswamy](https://github.com/sgopal08)
 
-### Prerequistes
-* Visual Studio Code with the Microsoft Dev Containers extension
-* Docker Desktop installed for creating and managing containers
+### Prerequisites
+* [**Visual Studio Code**](https://code.visualstudio.com/) with the Microsoft Dev Containers extension
+* [**Docker**](https://www.docker.com/products/docker-desktop/) installed for creating and managing containers
 
 ### Step 1: Create a new Dev Container project
 1. Create a `.devcontainer` directory in the root of your project with the following file inside of this "hidden" configuration directory: `.devcontainer/devcontainer.json`
@@ -20,17 +20,18 @@ cd comp423-rust-tutorial
 2. Initialize a new Git repository:
 ```
 git init
-
+```
 
 ### Step 3: Dev Container Configuration 
 The `devcontainer.json` file defines the configuration for your development environment. Here, we're specifying the following: 
+
 
 * **name**: A descriptive name for your dev container 
 * **image**: A base image from Microsoft 
 * **extensions**: Add the `rust-analyzer` VSCode plugin by the Rust Programming Language Group
 * **version**: Show the `rustc --version` to prove a recent version of Rust
 
-```rust
+```
 // A sample devcontainer.json
 {
   "name": "Rust Development",
@@ -59,13 +60,16 @@ fn main() {
 }
 ```
 
-### Step 5: Compile
+### Step 6: Compile
 Build your project using Cargo: 
 ``` 
 cargo build
 ```
+!!! note "What does this command do?"
+    It compiles your project's source code into an executable binary (if it's a binary project) or a library (if it's a library project).
 
-### Step 5: Run 
+
+### Step 7: Run 
 Run the project using Cargo:
 ```
 cargo run
@@ -77,3 +81,10 @@ Hello COMP423!
 ```
 !!! bug
     Verify that this is your output to ensure you followed the tutorial correctly!
+
+## Citations & Resources
+[Cargo Documentation](https://doc.rust-lang.org/cargo/guide/creating-a-new-project.html)
+
+[Rust Documentation](https://www.rust-lang.org/learn)
+
+[COMP423 MkDocs Tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/#what-is-a-development-dev-container)
