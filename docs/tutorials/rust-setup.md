@@ -7,10 +7,8 @@
 * [**Visual Studio Code**](https://code.visualstudio.com/) with the Microsoft Dev Containers extension
 * [**Docker**](https://www.docker.com/products/docker-desktop/) installed for creating and managing containers
 
-### Step 1: Create a new Dev Container project
-1. Create a `.devcontainer` directory in the root of your project with the following file inside of this "hidden" configuration directory: `.devcontainer/devcontainer.json`
 
-### Step 2: Create Blank Git Repository and Initialize 
+### Step 1: Create Blank Git Repository and Initialize 
 1. Open the terminal and create a new directory for your project: 
 ```
 mkdir comp423-rust-tutorial
@@ -21,6 +19,9 @@ cd comp423-rust-tutorial
 ```
 git init
 ```
+
+### Step 2: Create a new Dev Container project
+1. Create a `.devcontainer` directory in the root of your project with the following file inside of this "hidden" configuration directory: `.devcontainer/devcontainer.json`
 
 ### Step 3: Dev Container Configuration 
 The `devcontainer.json` file defines the configuration for your development environment. Here, we're specifying the following: 
@@ -36,7 +37,12 @@ The `devcontainer.json` file defines the configuration for your development envi
 {
   "name": "Rust Development",
   "image": "mcr.microsoft.com/vscode/devcontainers/rust:1",
-  "extensions": ["matklad.rust-analyzer"],
+  "customizations": {
+    "vscode": {
+        "settings": {},
+        "extensions": ["rust-lang.rust-analyzer"],
+    }
+  }
   "postCreateCommand": "rustup update && rustc --version"
 }
 ```
