@@ -42,10 +42,13 @@ The `devcontainer.json` file defines the configuration for your development envi
         "settings": {},
         "extensions": ["rust-lang.rust-analyzer"],
     }
-  }
+  },
   "postCreateCommand": "rustup update && rustc --version"
 }
 ```
+
+!!! note "Rust version"
+    The most recent Rust version is 1.83.0
 
 ### Step 4: Create a new rust project
 1. Open a new terminal
